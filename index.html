@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vrinda Store Investor Deck FY24-25</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</head>
+
+<body>
+    <div class="cursor"></div>
+
+    <div class="centered-header">
+        <h1>Vrinda Store Performance <span class="highlight-report">Report</span></h1>
+        <p class="subtitle">FY 2024-25 Investment Insight</p>
+    </div>
+
+    <main class="slides-container">
+        <!-- Slide 1: Executive Summary -->
+        <section id="slide-1" class="slide">
+            <div class="slide-split">
+                <div class="split-left reveal stagger-1">
+                    <span class="slide-number">01</span>
+                    <h1>Executive Summary</h1>
+                    <div class="kpi-banner reveal stagger-2">
+                        <div class="banner-item">
+                            <span class="val">₹21.18 Cr</span>
+                            <span class="lab">Total Revenue</span>
+                        </div>
+                        <div class="banner-item border-left">
+                            <span class="val">32,047</span>
+                            <span class="lab">Total Orders</span>
+                        </div>
+                        <div class="banner-item border-left">
+                            <span class="val">89.3%</span>
+                            <span class="lab">Delivery Success</span>
+                        </div>
+                    </div>
+                    <div class="narrative-box reveal stagger-3">
+                        <h3>Strategic Overview</h3>
+                        <ul>
+                            <li><strong>Core Strength:</strong> Women (30–50) drive the business (64% share).</li>
+                            <li><strong>Efficiency:</strong> High operational success with &lt;3% cancellation rate.
+                            </li>
+                            <li><strong>Risk:</strong> High dependency on Amazon (35%) and Top 3 channels (80%).</li>
+                            <li><strong>Growth Target:</strong> Roadmap to reach ₹25 Cr+ in 12 months.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="split-right swot-section reveal stagger-4">
+                    <div class="swot-grid">
+                        <div class="swot-item s">
+                            <h4>Strengths</h4>
+                            <p>High AOV & Female Loyalty</p>
+                        </div>
+                        <div class="swot-item w">
+                            <h4>Weaknesses</h4>
+                            <p>Channel Dependence</p>
+                        </div>
+                        <div class="swot-item o">
+                            <h4>Opportunities</h4>
+                            <p>North India & Men's Wear</p>
+                        </div>
+                        <div class="swot-item t">
+                            <h4>Threats</h4>
+                            <p>Platform Fee Hikes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Business Scale & Financial Health -->
+        <section id="slide-2" class="slide beige">
+            <div class="slide-content">
+                <span class="slide-number reveal stagger-1">02</span>
+                <h2 class="reveal stagger-2">Business Scale & Financial Health</h2>
+                <div class="financial-cards reveal stagger-3">
+                    <div class="fin-card">
+                        <span class="label">Total Revenue</span>
+                        <span class="value">₹21.18 Cr</span>
+                    </div>
+                    <div class="fin-card">
+                        <span class="label">Total Orders</span>
+                        <span class="value">32,047</span>
+                    </div>
+                    <div class="fin-card highlight">
+                        <span class="label">Avg Order Value (AOV)</span>
+                        <span class="value">₹6,609</span>
+                        <p class="small">Investors benchmark this for health</p>
+                    </div>
+                </div>
+                <div class="chart-box-large reveal stagger-4">
+                    <div class="chart-header">
+                        <h3>Revenue Split: Men vs Women</h3>
+                    </div>
+                    <div class="chart-flex">
+                        <div class="chart-wrap">
+                            <canvas id="gaugeChart"></canvas>
+                        </div>
+                        <div class="insight-overlay">
+                            <p>"The business is currently operating at scale with a healthy average ticket size,
+                                predominantly driven by the female segment."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Customer Segmentation -->
+        <section id="slide-3" class="slide">
+            <div class="slide-content">
+                <span class="slide-number reveal stagger-1">03</span>
+                <h2 class="reveal stagger-2">Customer Segmentation</h2>
+                <div class="segment-tree-map reveal stagger-3">
+                    <div class="tree-node leader" style="flex: 2;">
+                        <span class="node-title">Adult Women (30-50)</span>
+                        <span class="node-val">34.6%</span>
+                        <span class="node-tag">Cash Cow</span>
+                    </div>
+                    <div class="tree-column" style="flex: 1.5;">
+                        <div class="tree-node future">
+                            <span class="node-title">Teen Girls</span>
+                            <span class="node-val">21.1%</span>
+                            <span class="node-tag">Growth Future</span>
+                        </div>
+                        <div class="tree-node gap">
+                            <span class="node-title">Adult Men</span>
+                            <span class="node-val">15.5%</span>
+                            <span class="node-tag">Immediate Gap</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="strategic-callout reveal stagger-4">
+                    <h4>Strategic Insight</h4>
+                    <p>Adult Women are our 'Cash Cow,' but the Male segment represents a <strong>₹7.6 Cr
+                            opportunity</strong> that is currently under-marketed.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Channel Distribution -->
+        <section id="slide-4" class="slide glass">
+            <div class="slide-content">
+                <span class="slide-number reveal stagger-1">04</span>
+                <h2 class="reveal stagger-2">Channel Distribution (Omnichannel Strategy)</h2>
+                <div class="channel-layout">
+                    <div class="chart-container-horizontal reveal stagger-3">
+                        <canvas id="channelBarChart"></canvas>
+                    </div>
+                    <div class="so-what-box warning reveal stagger-4">
+                        <div class="so-what-header">
+                            <span class="icon">⚠️</span>
+                            <h4>Concentration Risk</h4>
+                        </div>
+                        <p>80% of revenue relies on 3 platforms. Strategic priority is to diversify into Meesho (Social
+                            Commerce) and D2C to reduce risk.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Geographic Footprint -->
+        <section id="slide-5" class="slide beige">
+            <div class="slide-content">
+                <span class="slide-number reveal stagger-1">05</span>
+                <h2 class="reveal stagger-2">Geographic Footprint</h2>
+                <div class="geo-split">
+                    <div class="map-container reveal stagger-3">
+                        <!-- Heatmap visualization using simple shapes for demo or chart -->
+                        <div class="heatmap-visual">
+                            <div class="region win">West (MH) <br>₹2.99 Cr</div>
+                            <div class="region win">South (KA) <br>Leader</div>
+                            <div class="region opp">North <br>Untapped</div>
+                        </div>
+                        <p class="map-caption">South India: 52.6% Contribution (Market Leader)</p>
+                    </div>
+                    <div class="geo-table-box reveal stagger-4">
+                        <table class="geo-table">
+                            <tr>
+                                <th>Region/State</th>
+                                <th>Contribution</th>
+                            </tr>
+                            <tr class="highlight">
+                                <td>Maharashtra</td>
+                                <td>₹2.99 Cr</td>
+                            </tr>
+                            <tr>
+                                <td>Karnataka</td>
+                                <td>12.5%</td>
+                            </tr>
+                            <tr>
+                                <td>UP</td>
+                                <td>9.9%</td>
+                            </tr>
+                        </table>
+                        <div class="insight-box mt-2">
+                            <p>The North India corridor (Delhi, Punjab) is largely untapped, representing the fastest
+                                route to new acquisition.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Seasonality & Timing -->
+        <section id="slide-6" class="slide">
+            <div class="slide-content">
+                <span class="slide-number reveal stagger-1">06</span>
+                <h2 class="reveal stagger-2">Seasonality & Timing</h2>
+                <div class="trend-container reveal stagger-3">
+                    <canvas id="seasonalityChart"></canvas>
+                </div>
+                <div class="action-plan-grid reveal stagger-4">
+                    <div class="plan-item">
+                        <div class="period peak">Peak (Jan-Apr)</div>
+                        <p>Increase ad spend by 40%.</p>
+                    </div>
+                    <div class="plan-item">
+                        <div class="period dip">Off (Sep-Nov)</div>
+                        <p>Aggressive discount campaigns.</p>
+                    </div>
+                    <div class="stat-bubble">16% Variance</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Operational Excellence -->
+        <section id="slide-7" class="slide glass">
+            <div class="slide-content">
+                <span class="slide-number reveal stagger-1">07</span>
+                <h2 class="reveal stagger-2">Operational Excellence (Fulfillment)</h2>
+                <div class="fulfillment-funnel">
+                    <div class="funnel-chart-wrap reveal stagger-3">
+                        <canvas id="statusRingChart"></canvas>
+                    </div>
+                    <div class="funnel-metrics reveal stagger-4">
+                        <div class="f-item success">
+                            <span class="lab">Delivered</span>
+                            <span class="val">89.3%</span>
+                        </div>
+                        <div class="f-item warning">
+                            <span class="lab">Returns</span>
+                            <span class="val">3.3%</span>
+                        </div>
+                        <div class="f-item muted">
+                            <span class="lab">Others</span>
+                            <span class="val">~4.2%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="insight-box highlight">
+                    <p>Reducing returns to 2% through imagery will save <strong>₹40-50 Lakhs</strong> annually.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Strategic Recommendations -->
+        <section id="slide-8" class="slide beige">
+            <div class="slide-content">
+                <span class="slide-number reveal stagger-1">08</span>
+                <h2 class="reveal stagger-2">3-Pillar Strategy Roadmap</h2>
+                <div class="pillar-grid reveal stagger-3">
+                    <div class="pillar-card">
+                        <div class="p-num">01</div>
+                        <h3>Market Penetration</h3>
+                        <ul>
+                            <li>Aggressive push in North India.</li>
+                            <li>Target: +30% Customer Base.</li>
+                        </ul>
+                    </div>
+                    <div class="pillar-card secondary">
+                        <div class="p-num">02</div>
+                        <h3>Product Diversification</h3>
+                        <ul>
+                            <li>Launch dedicated Men's Wear.</li>
+                            <li>60% budget on Adult Women.</li>
+                        </ul>
+                    </div>
+                    <div class="pillar-card tertiary">
+                        <div class="p-num">03</div>
+                        <h3>Channel Strategy</h3>
+                        <ul>
+                            <li>Reduce Amazon dependency &lt;30%.</li>
+                            <li>Scale Meesho & launch D2C.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: Final Financial Outlook -->
+        <section id="slide-9" class="slide dark">
+            <div class="slide-content">
+                <span class="slide-number reveal stagger-1">09</span>
+                <h2 class="reveal stagger-2">Financial Growth Projection</h2>
+                <div class="waterfall-container reveal stagger-3">
+                    <canvas id="waterfallChart"></canvas>
+                </div>
+                <div class="closing-statement reveal stagger-4">
+                    <h3>Target Revenue: ₹25 Cr+</h3>
+                    <p>"By unlocking the male segment and entering North Indian markets, we project a 20% revenue
+                        increase in FY25."</p>
+                </div>
+                <div class="brand-signature">Vrinda Store</div>
+                <div class="generated-by">Generated by: <strong>Ujjaval Bhardwaj</strong></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
