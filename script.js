@@ -59,10 +59,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 legend: { position: 'bottom', labels: { font: { size: 14 } } },
                 datalabels: {
                     formatter: (value) => `₹${value} Cr`,
-                    color: '#fff',
+                    color: (ctx) => ctx.dataIndex === 0 ? '#fff' : '#444',
                     anchor: 'center',
                     align: 'center',
-                    font: { size: 16 }
+                    font: { size: 18, weight: 'bold' },
+                    backgroundColor: (ctx) => ctx.dataIndex === 1 ? 'rgba(255,255,255,0.7)' : 'transparent',
+                    borderRadius: 4,
+                    padding: 4
                 }
             }
         }
@@ -140,19 +143,25 @@ document.addEventListener('DOMContentLoaded', () => {
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            scales: {
+                x: { grid: { display: false } },
+                y: {
+                    grid: { color: 'rgba(0,0,0,0.05)' },
+                    ticks: { stepSize: 0.1 },
+                    min: 1.5,
+                    max: 2.0
+                }
+            },
             plugins: {
                 legend: { display: false },
                 datalabels: {
-                    display: (context) => context.dataIndex % 2 === 0, // Show every second label to avoid clutter
+                    display: true,
                     align: 'top',
-                    offset: 10,
+                    offset: 8,
                     formatter: (v) => `₹${v}`,
-                    font: { size: 11 }
+                    color: '#d4a373',
+                    font: { size: 12, weight: 'bold' }
                 }
-            },
-            scales: {
-                x: { grid: { display: false } },
-                y: { grid: { color: '#eee' }, ticks: { stepSize: 0.1 } }
             }
         }
     });
@@ -183,10 +192,47 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Custom Plugin for Waterfall Connectors
+    const waterfallConnectors = {
+        id: 'waterfallConnectors',
+        afterDraw: (chart) => {
+            const { ctx, scales: { x, y } } = chart;
+            const dataset = chart.data.datasets[1]; // Delta dataset
+            const baseDataset = chart.data.datasets[0]; // Base dataset
+
+            ctx.save();
+            ctx.strokeStyle = '#d4a373';
+            ctx.setLineDash([5, 5]);
+            ctx.lineWidth = 2;
+
+            for (let i = 0; i < dataset.data.length - 1; i++) {
+                const currMeta = chart.getDatasetMeta(1).data[i];
+                const nextMeta = chart.getDatasetMeta(1).data[i + 1];
+
+                if (!currMeta || !nextMeta) continue;
+
+                // For waterfall, connector goes from the top of the current bar (if positive)
+                // to the base of the next bar.
+                const startX = currMeta.x + currMeta.width / 2;
+                const endX = nextMeta.x - nextMeta.width / 2;
+
+                // The logical "top" of the cumulative value
+                const yVal = currMeta.y;
+
+                ctx.beginPath();
+                ctx.moveTo(startX, yVal);
+                ctx.lineTo(endX, yVal);
+                ctx.stroke();
+            }
+            ctx.restore();
+        }
+    };
+
     // SLIDE 9: Waterfall Chart (Custom Bar)
     const waterCtx = document.getElementById('waterfallChart').getContext('2d');
     new Chart(waterCtx, {
         type: 'bar',
+        plugins: [waterfallConnectors],
         data: {
             labels: ['Current', "Men's Growth", 'North Expansion', 'OPS Savings', 'FY25 Target'],
             datasets: [
@@ -206,26 +252,42 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                     borderRadius: 6,
                     stack: 'Stack 0',
+                    minBarLength: 5,
+                    borderWidth: 1,
+                    borderColor: 'rgba(255,255,255,0.2)'
                 }
             ]
         },
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            layout: { padding: { top: 30 } },
             plugins: {
                 legend: { display: false },
                 datalabels: {
                     anchor: 'end',
-                    align: (ctx) => ctx.datasetIndex === 0 ? 'center' : 'top',
-                    formatter: (val, ctx) => ctx.datasetIndex === 1 ? `+₹${val}` : '',
-                    color: '#fff',
-                    font: { weight: 'bold' },
-                    display: (ctx) => ctx.datasetIndex === 1
+                    align: 'top',
+                    formatter: (val, ctx) => {
+                        if (ctx.index === 0) return `₹${val} Cr`;
+                        if (ctx.index === 4) return `Target: ₹${val} Cr`;
+                        return `+₹${val}`;
+                    },
+                    color: (ctx) => ctx.index === 4 ? '#2a9d8f' : '#d4a373',
+                    font: { weight: 'bold', size: 12 },
+                    display: (ctx) => ctx.datasetIndex === 1,
+                    offset: 10
                 }
             },
             scales: {
-                y: { display: false },
-                x: { grid: { display: false }, ticks: { color: '#aaa', font: { size: 10 } } }
+                y: {
+                    display: false,
+                    beginAtZero: true,
+                    max: 28
+                },
+                x: {
+                    grid: { display: false },
+                    ticks: { color: '#aaa', font: { size: 11, weight: '600' } }
+                }
             }
         }
     });
