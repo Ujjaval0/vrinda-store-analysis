@@ -1,73 +1,83 @@
-# 🛍️ Vrinda Store Sales Dashboard – Excel Data Analysis Project
+ # 🛍️ Vrinda Store Sales Dashboard – Excel Data Analysis Project
 
 ## 📌 Project Overview  
-This project analyzes **Vrinda Store’s 2022 online sales data** in Excel to understand **who buys, from where, and through which channels**.  
-The goal was to clean the raw dataset, build an interactive **annual sales dashboard**, and convert numbers into clear, business‑focused insights for stakeholders.
+This project analyzes **Vrinda Store’s 2022 online sales** in Excel to understand **who buys, from where, and via which channels**.  
+It includes **data cleaning, interactive dashboarding, and business insight generation**.
 
 ---
 
 ## 🎯 Objectives  
 
-- Measure overall **business performance** (revenue, orders, delivery success).  
-- Identify **core customer segments** by **gender and age bracket**.  
-- Analyze **sales channels** (Amazon, Myntra, Flipkart, Ajio, Meesho, Others) and dependency risk.  
-- Understand **geographic performance** across key Indian states.  
-- Study **seasonality and fulfillment quality** (returns, cancellations, refunds).  
-- Present the findings via an **Excel dashboard** and **strategic insight report (PPT)**.
+- Track **revenue, orders, and delivery success**.  
+- Identify **key customer segments** (gender, age).  
+- Evaluate **channel** and **state‑wise** performance.  
+- Study **seasonality** and **returns/cancellations**.  
+- Present findings via **Excel dashboard + PPT**.
 
 ---
 
 ## 🛠️ Tools & Skills Used  
 
-### Excel Features & Functions  
-- Data cleaning (remove noise, fix text cases, standardize states and channels).  
-- Sorting, filtering, and custom filters for quick exploration.  
-- Data Validation for controlled inputs and slicer‑friendly dimensions.  
-- Pivot Tables & Pivot Charts to summarize revenue, orders, and customer segments.  
-- Slicers (Month, Channel, Gender, Age Bracket, State) for interactive analysis.  
-- Conditional formatting to highlight high‑performing states and channels.
-
-### Data Transformation  
-- Used Excel / Power Query steps to:  
-  - Import raw transactional data.  
-  - Rename and type columns (dates, numeric fields, categories).  
-  - Handle missing / inconsistent values.  
-  - Create a clean fact table ready for pivoting.
-
-### Dashboard & Reporting  
-- Designed an **Excel dashboard** with:  
-  - KPI cards for Total Revenue, Total Orders, Delivery %  
-  - Gender‑wise and age‑bracket visuals  
-  - Channel‑wise and state‑wise performance charts  
-  - Monthly revenue trend (seasonality)  
-  - Order status breakdown (Delivered / Returned / Cancelled / Refunded)  
-- Built a **Strategic Business Insights PPT** summarizing:  
-  - Customer profile  
-  - Channel & geography performance  
-  - Seasonality patterns  
-  - Actionable recommendations
+- **Excel:** Pivot Tables, Pivot Charts, Slicers, Conditional Formatting, Data Validation.  
+- **Cleaning:** Standardization, duplicate check, type conversion.  
+- **Modeling:** Fact table, dimensions (Month, Channel, State, Age Bracket).  
+- **Reporting:** Dashboard layout, KPI cards, presentation storytelling.
 
 ---
 
 ## 📊 Key Analysis Steps  
 
-1. **Data Cleaning & Preparation**  
-   - Standardized **month names, state names, channels, and age brackets**.  
-   - Checked and removed duplicates in Order IDs where required.  
-   - Ensured numeric columns (Amount, Qty, Age) were clean for aggregation.
+1. **Prepare Data**  
+   - Cleaned columns, fixed formats, removed duplicates.  
+   - Ensured numeric fields ready for aggregation.
 
-2. **Exploratory Analysis**  
-   - Used filters and pivot tables to explore revenue and orders by:  
-     - Gender and age bracket  
-     - State and city  
-     - Channel and order status  
-   - Validated summary numbers against the dashboard KPIs.
+2. **Explore with Pivots**  
+   - Revenue & orders by gender, age, channel, state, month.  
+   - Status split (delivered/returned/cancelled/refunded).
 
-3. **Dashboard Creation**  
-   - Converted key pivots (monthly revenue, gender split, channel mix, state performance, order status) into charts.  
-   - Arranged visual elements into a single, clean dashboard sheet.  
-   - Added slicers for **Month, Channel, Gender, Age Bracket, State** to make it interactive for stakeholders.
+3. **Build Dashboard**  
+   - Created charts from key pivots.  
+   - Added slicers (Month, Channel, Gender, Age, State).  
 
-4. **Insight Generation & Storytelling**  
-   - Interpreted metrics to answer **“who is driving the business, where, and through which channels?”**  
-   - Identified risks (channel dependency, return rate) and opportunities (North I
+4. **Derive Insights**  
+   - Identified main buyers, strong channels, key states, and risk areas.  
+
+---
+
+## 🧠 Key Insights  
+
+### 1. Business Performance  
+- **Revenue:** ~₹21.18 Cr.  
+- **Orders:** ~32,047.  
+- **Delivery:** ~89.3% success.  
+
+### 2. Customers  
+- **Women:** 64% of revenue (~₹13.56 Cr).  
+- **Men:** 36% (~₹7.61 Cr).  
+- **Core segment:** Adult women (30–50) – 34.6% revenue.
+
+### 3. Channels  
+- Amazon 35.5%, Myntra 23.4%, Flipkart 21.6%.  
+- ~80% revenue from top 3 channels → **high dependency**.
+
+### 4. Geography  
+- Top states: Maharashtra, Karnataka, Uttar Pradesh, Telangana, Tamil Nadu.  
+- South India ~52.6% of revenue → **North/Tier‑2 = growth opportunity**.
+
+### 5. Seasonality & Returns  
+- Peak: **Jan–Apr**, Off‑season: **Sep–Nov**.  
+- Returns 3.3% → reducing to 2% can save **₹40–50 Lakhs** (approx).
+
+---
+
+## 📁 Files in this Repository  
+
+- `Vrinda-Store-Data-Analysis.xlsx` – Cleaned data, pivots, dashboard.  
+- `Vrinda-Store-Dashboard.pdf` – Static dashboard snapshot.  
+- `Vrinda-Store-Insights.pptx` – Summary presentation.
+
+---
+
+🤝 **Connect**  
+Open to feedback, suggestions, and collaboration on **Excel / data analytics / dashboards / AI projects**.
+
