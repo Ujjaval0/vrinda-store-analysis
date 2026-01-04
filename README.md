@@ -4,6 +4,7 @@
 This project analyzes **Vrinda Store’s 2022 online sales** in Excel to understand **who buys, from where, and via which channels**.  
 It includes **data cleaning, interactive dashboarding, and business insight generation**.
 
+live - https://vrindastore.netlify.app/
 ---
 
 ## 🎯 Objectives  
