@@ -1,20 +1,11 @@
 # Vrinda Store — Sales & Operations Data Report
-### FY 2024–25 · Exploratory Data Analysis · Business Intelligence
-
-<br>
+#### FY 2024–25 · Exploratory Data Analysis · Business Intelligence
 
 <div align="center">
 
-### 🔴 &nbsp; [VIEW LIVE REPORT → vrinda-store-analysis.vercel.app](https://vrinda-store-analysis.vercel.app/) &nbsp; 🔴
-
-</div>
-
-<br>
-
-<div align="center">
+**[VIEW LIVE REPORT](https://vrinda-store-analysis.vercel.app/)**
 
 ![Excel](https://img.shields.io/badge/Excel-Data%20Cleaning-217346?style=flat-square&logo=microsoft-excel&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=flat-square&logo=powerbi&logoColor=black)
 ![JavaScript](https://img.shields.io/badge/JavaScript-Chart.js-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![HTML](https://img.shields.io/badge/HTML5-Report%20UI-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Deployed-Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
@@ -23,20 +14,20 @@
 
 ---
 
-## About
+## Overview
 
-Vrinda Store is a mid-scale Indian apparel retailer selling across **7 major e-commerce platforms**. This project analyzes **32,047 real orders** and **₹21.18 Crore in annual revenue** across 10+ Indian states — and turns the findings into an interactive, editorial-style web report.
+Vrinda Store is a mid-scale Indian apparel retailer operating across 7 major e-commerce platforms. This project analyzes **32,047 orders** and **₹21.18 Crore in annual revenue** across 10+ Indian states, delivering findings as an interactive, editorial-style web report.
 
-The analysis challenges common assumptions about channels, customers, and growth opportunities.
+The analysis surfaces insights that challenge common assumptions about channels, customer segments, and growth opportunities — and closes with a concrete 3-pillar strategy roadmap.
 
 ---
 
-## Live Demo
+## Live Report
 
 | | |
-|---|---|
-| 🌐 **Live Report** | [vrinda-store-analysis.vercel.app](https://vrinda-store-analysis.vercel.app/) |
-| 💻 **Source Code** | [github.com/Ujjaval0/vrinda-store-analysis](https://github.com/Ujjaval0/vrinda-store-analysis) |
+|:---|:---|
+| **Live URL** | [vrinda-store-analysis.vercel.app](https://vrinda-store-analysis.vercel.app/) |
+| **Repository** | [github.com/Ujjaval0/vrinda-store-analysis](https://github.com/Ujjaval0/vrinda-store-analysis) |
 
 ---
 
@@ -44,51 +35,51 @@ The analysis challenges common assumptions about channels, customers, and growth
 
 | Metric | Value |
 |:---|:---|
-| 💰 Total Revenue | ₹21.18 Crore |
-| 📦 Total Orders | 32,047 |
-| 🛒 Avg. Order Value | ₹6,609 |
-| ✅ Delivery Success Rate | 89.3% |
-| 🏪 Sales Channels | 7 Platforms |
-| 🗺️ States Covered | 10+ |
+| Total Revenue | ₹21.18 Crore |
+| Total Orders | 32,047 |
+| Avg. Order Value (AOV) | ₹6,609 |
+| Delivery Success Rate | 89.3% |
+| Sales Channels | 7 Platforms |
+| States Covered | 10+ |
 
 ---
 
-## Dashboards & Analysis
+## Analysis — 7 Dashboards
 
 <details>
-<summary><strong>Dashboard 1 — Executive Summary</strong></summary>
+<summary>Dashboard 1 — Executive Summary</summary>
 <br>
 
-- **64%** of all revenue is driven by female customers
-- Top 3 channels (Amazon, Myntra, Flipkart) = **80% of revenue** — a concentration risk
-- Cancellation rate is below **3%**, far better than the apparel industry average
+- 64% of all revenue is driven by female customers
+- Top 3 channels (Amazon, Myntra, Flipkart) account for 80% of total revenue — a significant concentration risk
+- Cancellation rate is below 3%, well above the apparel e-commerce industry average
 
 </details>
 
 <details>
-<summary><strong>Dashboard 2 — Financial Health & Revenue Split</strong></summary>
+<summary>Dashboard 2 — Financial Health & Revenue Split</summary>
 <br>
 
 - Women's Revenue: **₹13.56 Cr** &nbsp;|&nbsp; Men's Revenue: **₹7.61 Cr**
-- Healthy AOV of **₹6,609** — a strong investor benchmark
-- Gender doughnut chart clearly reveals the revenue driver
+- AOV of ₹6,609 is a healthy investor-grade benchmark for this category
+- Gender revenue doughnut chart reveals the dominant segment clearly
 
 </details>
 
 <details>
-<summary><strong>Dashboard 3 — Customer Segmentation</strong></summary>
+<summary>Dashboard 3 — Customer Segmentation</summary>
 <br>
 
-| Segment | Revenue Share | Label |
+| Segment | Revenue Share | Strategic Label |
 |:---|:---:|:---|
-| Adult Women (30–50) | 34.6% | 🟢 Cash Cow |
-| Teen Girls | 21.1% | 🔵 Growth Future |
-| Adult Men | 15.5% | 🟡 Immediate Gap |
+| Adult Women (30–50) | 34.6% | Cash Cow |
+| Teen Girls | 21.1% | Growth Future |
+| Adult Men | 15.5% | Immediate Gap |
 
 </details>
 
 <details>
-<summary><strong>Dashboard 4 — Channel Distribution</strong></summary>
+<summary>Dashboard 4 — Channel Distribution</summary>
 <br>
 
 | Platform | Revenue Share |
@@ -99,113 +90,69 @@ The analysis challenges common assumptions about channels, customers, and growth
 | Ajio | 6.2% |
 | Meesho + Nalli | ~9.3% |
 
-> ⚠️ 80% of revenue relies on just 3 platforms — a significant business risk.
+> 80% of revenue relies on just 3 platforms — reducing this dependency is a strategic priority.
 
 </details>
 
 <details>
-<summary><strong>Dashboard 5 — Geographic Footprint</strong></summary>
+<summary>Dashboard 5 — Geographic Footprint</summary>
 <br>
 
-- **South India** — 52.6% revenue share (market leader)
-- **Maharashtra** — ₹2.99 Cr (top single state)
-- **North India** (Delhi, Punjab, Haryana) — largely untapped, highest growth potential
+- South India contributes **52.6%** of total revenue — Vrinda holds market leadership here
+- Maharashtra is the top individual state at ₹2.99 Cr
+- North India (Delhi, Punjab, Haryana) remains largely untapped with high acquisition potential
 
 </details>
 
 <details>
-<summary><strong>Dashboard 6 — Seasonality & Timing</strong></summary>
+<summary>Dashboard 6 — Seasonality & Timing</summary>
 <br>
 
-- 📈 **Peak:** Jan–Apr (wedding + festival season) → increase ad spend 40%
-- 📉 **Dip:** Sep–Nov → run aggressive discount campaigns
-- **16% variance** between peak and trough — predictable enough for a media calendar
+- Peak period: **Jan–Apr** (wedding and festival season) — recommended 40% ad spend increase
+- Dip period: **Sep–Nov** — discount-led campaigns to sustain order volume
+- Peak-to-trough variance of 16% is predictable enough to build a structured media calendar
 
 </details>
 
 <details>
-<summary><strong>Dashboard 7 — Operational Excellence</strong></summary>
+<summary>Dashboard 7 — Operational Excellence</summary>
 <br>
 
-- ✅ Delivered: **89.3%**
-- ↩️ Returns: **3.3%**
-- Reducing returns to 2% via better imagery = **₹40–50 Lakhs saved annually**
+- Delivered: **89.3%** | Returns: **3.3%** | Other leakage: ~7.4%
+- Improving product imagery and size guidance to reduce returns from 3.3% to 2% is projected to save ₹40–50 Lakhs annually
 
 </details>
 
 ---
 
-## Strategic Recommendations
+## Strategy Roadmap
 
-```
-Pillar 01 — Market Penetration
-  → Aggressive push into North India (Delhi, Punjab, Haryana)
-  → Target: +30% new customer base within 12 months
-  → Expand state coverage: 10 → 18 states
+**Pillar 01 — Market Penetration**
+- Aggressive push into North India (Delhi, Punjab, Haryana)
+- Target: +30% new customer base within 12 months
+- Expand state coverage from 10 to 18 states
 
-Pillar 02 — Product Diversification
-  → Launch a dedicated Men's Wear collection
-  → Retain 60% budget on Adult Women (Cash Cow)
-  → Target Teen Girls with trend-driven drops
+**Pillar 02 — Product Diversification**
+- Launch a dedicated Men's Wear collection targeting the underserved 15.5% segment
+- Retain 60% marketing budget allocation on Adult Women (core revenue driver)
+- Target Teen Girls cohort with trend-driven, short-cycle drops
 
-Pillar 03 — Channel Strategy
-  → Reduce Amazon dependency: 35% → below 30%
-  → Scale Meesho for social-commerce growth
-  → Launch D2C website for direct margin improvement
-```
+**Pillar 03 — Channel Strategy**
+- Reduce Amazon revenue dependency from 35% to below 30%
+- Scale Meesho for social-commerce audience penetration
+- Launch a D2C channel to improve margins and own customer data
 
-> **Financial Target: ₹25 Cr+ in FY25** — a projected 20%+ revenue increase.
-
----
-
-## Tools & Technologies
-
-| Category | Tools Used |
-|:---|:---|
-| Data Cleaning | Microsoft Excel, Pivot Tables |
-| Dashboards | Power BI, DAX |
-| Web Report | HTML5, Vanilla CSS, JavaScript |
-| Charts | Chart.js, chartjs-plugin-datalabels |
-| Fonts | Inter + Playfair Display (Google Fonts) |
-| Deployment | Vercel |
-| Version Control | Git + GitHub |
-
----
-
-## File Structure
-
-```
-vrinda-store-analysis/
-│
-├── index.html                      # Interactive web report
-├── style.css                       # Editorial report stylesheet
-├── script.js                       # Chart.js visualizations
-├── Vrinda Store Data Analysis.xlsx # Raw dataset (Excel)
-├── Vrinda-Store-Dashboard.pdf      # Power BI export
-└── README.md
-```
-
----
-
-## Run Locally
-
-```bash
-git clone https://github.com/Ujjaval0/vrinda-store-analysis.git
-cd vrinda-store-analysis
-
-# No npm or build step needed — open directly:
-start index.html
-```
+> **Financial Target: ₹25 Cr+ in FY25** — a projected 20%+ revenue increase by executing all three pillars.
 
 ---
 
 ## Key Takeaways
 
-1. **Women 30–50 are the backbone** — protect this segment at all costs
-2. **80% revenue on 3 platforms** — channel concentration is the #1 risk
-3. **North India is a greenfield** — low penetration, high e-commerce growth
-4. **Men's segment is underserved** — ₹7.6 Cr sitting on the table
-5. **89.3% delivery rate** — operational health is a marketing asset
+1. **Adult Women (30–50) are the business backbone** — any growth strategy must protect this segment first
+2. **Channel concentration is the single biggest operational risk** — 80% revenue from 3 platforms
+3. **North India is a greenfield market** — low current penetration, high e-commerce adoption growth
+4. **The male segment is underserved** — represents a ₹7.6 Cr revenue opportunity that is currently under-marketed
+5. **Operational health is strong** — a 89.3% delivery rate is a competitive asset worth promoting
 
 ---
 
@@ -220,5 +167,5 @@ start index.html
 ---
 
 <div align="center">
-  <sub>Built with data, not assumptions · FY 2024–25</sub>
+  <sub>Built with data, not assumptions &nbsp;·&nbsp; FY 2024–25</sub>
 </div>
