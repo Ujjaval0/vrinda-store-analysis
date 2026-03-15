@@ -4,317 +4,499 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vrinda Store Investor Deck FY24-25</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Vrinda Store — Data Report FY 2024-25</title>
+    <meta name="description" content="Vrinda Store FY 2024-25 Sales & Operations Data Report — A full exploratory analysis of revenue, customers, channels, and growth strategy.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="cursor"></div>
 
-    <div class="centered-header">
-        <h1>Vrinda Store Performance <span class="highlight-report">Report</span></h1>
-        <p class="subtitle">FY 2024-25 Investment Insight</p>
-    </div>
+    <!-- ═══════════════════════════════════════
+         HEADER
+    ═══════════════════════════════════════ -->
+    <header class="report-header">
+        <div class="header-inner">
+            <div class="header-top-rule"></div>
+            <div class="header-meta-row">
+                <span class="header-category">E-COMMERCE &amp; RETAIL — DATA REPORT</span>
+                <span class="header-author">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                    Ujjaval Bhardwaj &nbsp;·&nbsp; FY 2024-25
+                </span>
+            </div>
+            <h1 class="report-title">The Vrinda Store</h1>
+            <p class="report-subtitle">How Data Reveals the Real Story Behind ₹21 Crore in Annual Sales</p>
 
-    <main class="slides-container">
-        <!-- Slide 1: Executive Summary -->
-        <section id="slide-1" class="slide">
-            <div class="slide-split">
-                <div class="split-left reveal stagger-1">
-                    <span class="slide-number">01</span>
-                    <h1>Executive Summary</h1>
-                    <div class="kpi-banner reveal stagger-2">
-                        <div class="banner-item">
-                            <span class="val">₹21.18 Cr</span>
-                            <span class="lab">Total Revenue</span>
-                        </div>
-                        <div class="banner-item border-left">
-                            <span class="val">32,047</span>
-                            <span class="lab">Total Orders</span>
-                        </div>
-                        <div class="banner-item border-left">
-                            <span class="val">89.3%</span>
-                            <span class="lab">Delivery Success</span>
-                        </div>
-                    </div>
-                    <div class="narrative-box reveal stagger-3">
-                        <h3>Strategic Overview</h3>
-                        <ul>
-                            <li><strong>Core Strength:</strong> Women (30–50) drive the business (64% share).</li>
-                            <li><strong>Efficiency:</strong> High operational success with &lt;3% cancellation rate.
-                            </li>
-                            <li><strong>Risk:</strong> High dependency on Amazon (35%) and Top 3 channels (80%).</li>
-                            <li><strong>Growth Target:</strong> Roadmap to reach ₹25 Cr+ in 12 months.</li>
-                        </ul>
-                    </div>
+            <!-- STAT STRIP -->
+            <div class="stat-strip">
+                <div class="stat-item">
+                    <span class="stat-val">₹21.18 Cr</span>
+                    <span class="stat-label">TOTAL REVENUE</span>
                 </div>
-                <div class="split-right swot-section reveal stagger-4">
-                    <div class="swot-grid">
-                        <div class="swot-item s">
-                            <h4>Strengths</h4>
-                            <p>High AOV & Female Loyalty</p>
-                        </div>
-                        <div class="swot-item w">
-                            <h4>Weaknesses</h4>
-                            <p>Channel Dependence</p>
-                        </div>
-                        <div class="swot-item o">
-                            <h4>Opportunities</h4>
-                            <p>North India & Men's Wear</p>
-                        </div>
-                        <div class="swot-item t">
-                            <h4>Threats</h4>
-                            <p>Platform Fee Hikes</p>
-                        </div>
+                <div class="stat-item">
+                    <span class="stat-val">32,047</span>
+                    <span class="stat-label">TOTAL ORDERS</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-val">89.3%</span>
+                    <span class="stat-label">DELIVERY SUCCESS</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-val">7</span>
+                    <span class="stat-label">CHANNELS</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-val">10+</span>
+                    <span class="stat-label">STATES COVERED</span>
+                </div>
+            </div>
+
+            <!-- BADGES -->
+            <div class="badge-row">
+                <span class="badge-group-label">TOOLS</span>
+                <span class="badge tool-badge">Excel</span>
+                <span class="badge tool-badge">Power BI</span>
+                <span class="badge tool-badge">Pivot Tables</span>
+                <span class="badge-group-label" style="margin-left:1.5rem;">TYPE</span>
+                <span class="badge type-badge">Sales Analysis</span>
+                <span class="badge type-badge">Customer Segmentation</span>
+                <span class="badge type-badge">Business Intelligence</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="report-body">
+
+        <!-- ═══════════════════════════════════════
+             SECTION: PROJECT OVERVIEW
+        ═══════════════════════════════════════ -->
+        <section class="report-section" id="overview">
+            <h2 class="section-title">THE PROJECT OVERVIEW</h2>
+            <div class="section-divider"></div>
+            <p class="section-lead">
+                Vrinda Store sells on 7 major platforms across India. This project skips the opinions and goes
+                straight to the data — <strong>32,047 real orders, ₹21.18 Crore in annual revenue, and 10+ states</strong>
+                analyzed across multiple customer segments. What we found challenges almost everything management
+                assumed about channels, customers, and growth.
+            </p>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             SECTION: EDA — EXECUTIVE SUMMARY
+        ═══════════════════════════════════════ -->
+        <section class="report-section" id="eda">
+            <h2 class="section-title">EXPLORATORY DATA ANALYSIS</h2>
+            <div class="section-divider"></div>
+
+            <!-- Dashboard 1 -->
+            <div class="dashboard-block">
+                <div class="dashboard-header">
+                    <div class="dashboard-title-group">
+                        <h3 class="dashboard-title">Dashboard 1 — Executive Summary</h3>
+                        <p class="dashboard-meta">
+                            <span class="meta-chip">₹21.18 Cr Revenue</span>
+                            <span class="meta-chip">32,047 Orders</span>
+                            <span class="meta-chip">7 Channels</span>
+                        </p>
+                    </div>
+                    <span class="insights-badge">3 INSIGHTS <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></span>
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">📊 32K+ Orders</span>
+                    <span class="tech-tag">⚙ 7 Channels</span>
+                    <span class="tech-tag">🗺 10+ States</span>
+                    <span class="tech-tag highlight-tag">Cleaned in Excel &nbsp;·&nbsp; Visualized in Power BI</span>
+                </div>
+
+                <!-- Insight Cards -->
+                <div class="insight-cards">
+                    <div class="insight-card">
+                        <div class="ic-num">01</div>
+                        <h4>Women Drive the Business</h4>
+                        <p>Female customers account for 64% of all orders and form the core revenue pillar of the store. Adult women aged 30–50 alone represent 34.6%.</p>
+                    </div>
+                    <div class="insight-card accent">
+                        <div class="ic-num">02</div>
+                        <h4>Channel Concentration Risk</h4>
+                        <p>Amazon (35.5%), Myntra (23.4%), and Flipkart (21.6%) together contribute 80% of total revenue — a significant concentration risk.</p>
+                    </div>
+                    <div class="insight-card">
+                        <div class="ic-num">03</div>
+                        <h4>Exceptional Delivery Rate</h4>
+                        <p>89.3% of all orders are successfully delivered, with a cancellation rate below 3% — well above industry average for apparel e-commerce.</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 2: Business Scale & Financial Health -->
-        <section id="slide-2" class="slide beige">
-            <div class="slide-content">
-                <span class="slide-number reveal stagger-1">02</span>
-                <h2 class="reveal stagger-2">Business Scale & Financial Health</h2>
-                <div class="financial-cards reveal stagger-3">
-                    <div class="fin-card">
-                        <span class="label">Total Revenue</span>
-                        <span class="value">₹21.18 Cr</span>
+            <!-- Dashboard 2 -->
+            <div class="dashboard-block" id="financial">
+                <div class="dashboard-header">
+                    <div class="dashboard-title-group">
+                        <h3 class="dashboard-title">Dashboard 2 — Financial Health &amp; Revenue Split</h3>
+                        <p class="dashboard-meta">
+                            <span class="meta-chip">Gender Split</span>
+                            <span class="meta-chip">AOV Analysis</span>
+                        </p>
                     </div>
-                    <div class="fin-card">
-                        <span class="label">Total Orders</span>
-                        <span class="value">32,047</span>
-                    </div>
-                    <div class="fin-card highlight">
-                        <span class="label">Avg Order Value (AOV)</span>
-                        <span class="value">₹6,609</span>
-                        <p class="small">Investors benchmark this for health</p>
-                    </div>
+                    <span class="insights-badge">2 INSIGHTS <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></span>
                 </div>
-                <div class="chart-box-large reveal stagger-4">
-                    <div class="chart-header">
-                        <h3>Revenue Split: Men vs Women</h3>
-                    </div>
-                    <div class="chart-flex">
-                        <div class="chart-wrap">
+                <div class="tech-tags">
+                    <span class="tech-tag">📊 Gender Revenue Split</span>
+                    <span class="tech-tag">📐 AOV Benchmark</span>
+                    <span class="tech-tag highlight-tag">Doughnut Chart &nbsp;·&nbsp; Excel Pivot</span>
+                </div>
+
+                <div class="chart-and-insight">
+                    <div class="chart-pane">
+                        <h4 class="chart-label">Revenue: Men vs Women</h4>
+                    <div class="ch-wrap h-donut">
                             <canvas id="gaugeChart"></canvas>
                         </div>
-                        <div class="insight-overlay">
-                            <p>"The business is currently operating at scale with a healthy average ticket size,
-                                predominantly driven by the female segment."</p>
+                    </div>
+                    <div class="insight-pane">
+                        <div class="kpi-row">
+                            <div class="kpi-box">
+                                <span class="kpi-v">₹6,609</span>
+                                <span class="kpi-l">Avg. Order Value (AOV)</span>
+                            </div>
+                            <div class="kpi-box dark">
+                                <span class="kpi-v">₹13.56 Cr</span>
+                                <span class="kpi-l">Women's Revenue</span>
+                            </div>
+                            <div class="kpi-box">
+                                <span class="kpi-v">₹7.61 Cr</span>
+                                <span class="kpi-l">Men's Revenue</span>
+                            </div>
                         </div>
+                        <blockquote class="insight-quote">
+                            "The business is currently operating at scale with a healthy average ticket size of ₹6,609 — predominantly driven by the female segment (64%). The male segment represents an immediate ₹7.6 Cr expansion opportunity."
+                        </blockquote>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 3: Customer Segmentation -->
-        <section id="slide-3" class="slide">
-            <div class="slide-content">
-                <span class="slide-number reveal stagger-1">03</span>
-                <h2 class="reveal stagger-2">Customer Segmentation</h2>
-                <div class="segment-tree-map reveal stagger-3">
-                    <div class="tree-node leader" style="flex: 2;">
-                        <span class="node-title">Adult Women (30-50)</span>
-                        <span class="node-val">34.6%</span>
-                        <span class="node-tag">Cash Cow</span>
+            <!-- Dashboard 3 -->
+            <div class="dashboard-block" id="segmentation">
+                <div class="dashboard-header">
+                    <div class="dashboard-title-group">
+                        <h3 class="dashboard-title">Dashboard 3 — Customer Segmentation</h3>
+                        <p class="dashboard-meta">
+                            <span class="meta-chip">Age Groups</span>
+                            <span class="meta-chip">Gender Cohorts</span>
+                        </p>
                     </div>
-                    <div class="tree-column" style="flex: 1.5;">
-                        <div class="tree-node future">
-                            <span class="node-title">Teen Girls</span>
-                            <span class="node-val">21.1%</span>
-                            <span class="node-tag">Growth Future</span>
+                    <span class="insights-badge">3 INSIGHTS <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></span>
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">📊 Segment Breakdown</span>
+                    <span class="tech-tag highlight-tag">Treemap &nbsp;·&nbsp; Excel</span>
+                </div>
+
+                <div class="treemap-grid">
+                    <div class="tree-card main-card">
+                        <span class="tree-label">Adult Women (30–50)</span>
+                        <span class="tree-val">34.6%</span>
+                        <span class="tree-tag">Cash Cow</span>
+                    </div>
+                    <div class="tree-col">
+                        <div class="tree-card accent-card">
+                            <span class="tree-label">Teen Girls</span>
+                            <span class="tree-val">21.1%</span>
+                            <span class="tree-tag">Growth Future</span>
                         </div>
-                        <div class="tree-node gap">
-                            <span class="node-title">Adult Men</span>
-                            <span class="node-val">15.5%</span>
-                            <span class="node-tag">Immediate Gap</span>
+                        <div class="tree-card gap-card">
+                            <span class="tree-label">Adult Men</span>
+                            <span class="tree-val">15.5%</span>
+                            <span class="tree-tag">Immediate Gap</span>
                         </div>
                     </div>
                 </div>
-                <div class="strategic-callout reveal stagger-4">
+
+                <div class="callout-box">
                     <h4>Strategic Insight</h4>
-                    <p>Adult Women are our 'Cash Cow,' but the Male segment represents a <strong>₹7.6 Cr
-                            opportunity</strong> that is currently under-marketed.</p>
+                    <p>Adult Women are our 'Cash Cow,' but the Male segment represents a <strong>₹7.6 Cr opportunity</strong> that is currently under-marketed. Targeted men's wear launch could add 15-20% to revenue.</p>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 4: Channel Distribution -->
-        <section id="slide-4" class="slide glass">
-            <div class="slide-content">
-                <span class="slide-number reveal stagger-1">04</span>
-                <h2 class="reveal stagger-2">Channel Distribution (Omnichannel Strategy)</h2>
-                <div class="channel-layout">
-                    <div class="chart-container-horizontal reveal stagger-3">
-                        <canvas id="channelBarChart"></canvas>
+            <!-- Dashboard 4 -->
+            <div class="dashboard-block" id="channels">
+                <div class="dashboard-header">
+                    <div class="dashboard-title-group">
+                        <h3 class="dashboard-title">Dashboard 4 — Channel Distribution</h3>
+                        <p class="dashboard-meta">
+                            <span class="meta-chip">7 Platforms</span>
+                            <span class="meta-chip">Omnichannel Strategy</span>
+                        </p>
                     </div>
-                    <div class="so-what-box warning reveal stagger-4">
-                        <div class="so-what-header">
-                            <span class="icon">⚠️</span>
-                            <h4>Concentration Risk</h4>
-                        </div>
-                        <p>80% of revenue relies on 3 platforms. Strategic priority is to diversify into Meesho (Social
-                            Commerce) and D2C to reduce risk.</p>
-                    </div>
+                    <span class="insights-badge">2 INSIGHTS <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></span>
                 </div>
-            </div>
-        </section>
+                <div class="tech-tags">
+                    <span class="tech-tag">📊 Platform Revenue Share</span>
+                    <span class="tech-tag highlight-tag">Horizontal Bar Chart &nbsp;·&nbsp; Excel</span>
+                </div>
 
-        <!-- Slide 5: Geographic Footprint -->
-        <section id="slide-5" class="slide beige">
-            <div class="slide-content">
-                <span class="slide-number reveal stagger-1">05</span>
-                <h2 class="reveal stagger-2">Geographic Footprint</h2>
-                <div class="geo-split">
-                    <div class="map-container reveal stagger-3">
-                        <!-- Heatmap visualization using simple shapes for demo or chart -->
-                        <div class="heatmap-visual">
-                            <div class="region win">West (MH) <br>₹2.99 Cr</div>
-                            <div class="region win">South (KA) <br>Leader</div>
-                            <div class="region opp">North <br>Untapped</div>
+                <div class="chart-and-insight">
+                    <div class="chart-pane wide">
+                        <h4 class="chart-label">Revenue Share by Channel (%)</h4>
+                        <div class="ch-wrap h-bar">
+                            <canvas id="channelBarChart"></canvas>
                         </div>
-                        <p class="map-caption">South India: 52.6% Contribution (Market Leader)</p>
                     </div>
-                    <div class="geo-table-box reveal stagger-4">
-                        <table class="geo-table">
-                            <tr>
-                                <th>Region/State</th>
-                                <th>Contribution</th>
-                            </tr>
-                            <tr class="highlight">
-                                <td>Maharashtra</td>
-                                <td>₹2.99 Cr</td>
-                            </tr>
-                            <tr>
-                                <td>Karnataka</td>
-                                <td>12.5%</td>
-                            </tr>
-                            <tr>
-                                <td>UP</td>
-                                <td>9.9%</td>
-                            </tr>
-                        </table>
-                        <div class="insight-box mt-2">
-                            <p>The North India corridor (Delhi, Punjab) is largely untapped, representing the fastest
-                                route to new acquisition.</p>
+                    <div class="insight-pane narrow">
+                        <div class="warning-box">
+                            <div class="warn-header">
+                                <span>⚠️</span>
+                                <h4>Concentration Risk</h4>
+                            </div>
+                            <p>80% of revenue relies on 3 platforms. Strategic priority is to diversify into Meesho (Social Commerce) and D2C to reduce dependency.</p>
+                        </div>
+                        <div class="opportunity-box">
+                            <h4>Opportunity</h4>
+                            <p>Meesho and Nalli combined hold only ~9% share today but represent the fastest social-commerce growth corridor.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 6: Seasonality & Timing -->
-        <section id="slide-6" class="slide">
-            <div class="slide-content">
-                <span class="slide-number reveal stagger-1">06</span>
-                <h2 class="reveal stagger-2">Seasonality & Timing</h2>
-                <div class="trend-container reveal stagger-3">
-                    <canvas id="seasonalityChart"></canvas>
-                </div>
-                <div class="action-plan-grid reveal stagger-4">
-                    <div class="plan-item">
-                        <div class="period peak">Peak (Jan-Apr)</div>
-                        <p>Increase ad spend by 40%.</p>
+            <!-- Dashboard 5 -->
+            <div class="dashboard-block" id="geography">
+                <div class="dashboard-header">
+                    <div class="dashboard-title-group">
+                        <h3 class="dashboard-title">Dashboard 5 — Geographic Footprint</h3>
+                        <p class="dashboard-meta">
+                            <span class="meta-chip">10+ States</span>
+                            <span class="meta-chip">Regional Heatmap</span>
+                        </p>
                     </div>
-                    <div class="plan-item">
-                        <div class="period dip">Off (Sep-Nov)</div>
-                        <p>Aggressive discount campaigns.</p>
-                    </div>
-                    <div class="stat-bubble">16% Variance</div>
+                    <span class="insights-badge">2 INSIGHTS <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></span>
                 </div>
-            </div>
-        </section>
+                <div class="tech-tags">
+                    <span class="tech-tag">🗺 State-level Data</span>
+                    <span class="tech-tag highlight-tag">Map Visual &nbsp;·&nbsp; Power BI</span>
+                </div>
 
-        <!-- Slide 7: Operational Excellence -->
-        <section id="slide-7" class="slide glass">
-            <div class="slide-content">
-                <span class="slide-number reveal stagger-1">07</span>
-                <h2 class="reveal stagger-2">Operational Excellence (Fulfillment)</h2>
-                <div class="fulfillment-funnel">
-                    <div class="funnel-chart-wrap reveal stagger-3">
-                        <canvas id="statusRingChart"></canvas>
-                    </div>
-                    <div class="funnel-metrics reveal stagger-4">
-                        <div class="f-item success">
-                            <span class="lab">Delivered</span>
-                            <span class="val">89.3%</span>
+                <div class="geo-layout">
+                    <div class="region-grid">
+                        <div class="region-card win">
+                            <h5>Maharashtra</h5>
+                            <span class="region-val">₹2.99 Cr</span>
+                            <span class="region-tag">Top State</span>
                         </div>
-                        <div class="f-item warning">
-                            <span class="lab">Returns</span>
-                            <span class="val">3.3%</span>
+                        <div class="region-card win">
+                            <h5>Karnataka</h5>
+                            <span class="region-val">12.5%</span>
+                            <span class="region-tag">South Leader</span>
                         </div>
-                        <div class="f-item muted">
-                            <span class="lab">Others</span>
-                            <span class="val">~4.2%</span>
+                        <div class="region-card neutral">
+                            <h5>Uttar Pradesh</h5>
+                            <span class="region-val">9.9%</span>
+                            <span class="region-tag">Growing</span>
+                        </div>
+                        <div class="region-card opp">
+                            <h5>North India</h5>
+                            <span class="region-val">Untapped</span>
+                            <span class="region-tag">Highest Potential</span>
                         </div>
                     </div>
+                    <div class="geo-insight">
+                        <p class="geo-lead">South India contributes <strong>52.6%</strong> of revenue — Vrinda is a market leader here. The North India corridor (Delhi, Punjab, Haryana) is largely untapped and represents the fastest route to new customer acquisition.</p>
+                        <div class="geo-bar-row">
+                            <span class="geo-bar-label">South India</span>
+                            <div class="geo-bar-track">
+                                <div class="geo-bar-fill south" style="width:52.6%"></div>
+                            </div>
+                            <span class="geo-bar-pct">52.6%</span>
+                        </div>
+                        <div class="geo-bar-row">
+                            <span class="geo-bar-label">West (MH)</span>
+                            <div class="geo-bar-track">
+                                <div class="geo-bar-fill west" style="width:24%"></div>
+                            </div>
+                            <span class="geo-bar-pct">24%</span>
+                        </div>
+                        <div class="geo-bar-row">
+                            <span class="geo-bar-label">North India</span>
+                            <div class="geo-bar-track">
+                                <div class="geo-bar-fill north" style="width:12%"></div>
+                            </div>
+                            <span class="geo-bar-pct">12%</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="insight-box highlight">
-                    <p>Reducing returns to 2% through imagery will save <strong>₹40-50 Lakhs</strong> annually.</p>
+            </div>
+
+            <!-- Dashboard 6 -->
+            <div class="dashboard-block" id="seasonality">
+                <div class="dashboard-header">
+                    <div class="dashboard-title-group">
+                        <h3 class="dashboard-title">Dashboard 6 — Seasonality &amp; Timing</h3>
+                        <p class="dashboard-meta">
+                            <span class="meta-chip">12-Month Trend</span>
+                            <span class="meta-chip">Peak &amp; Dip Analysis</span>
+                        </p>
+                    </div>
+                    <span class="insights-badge">3 INSIGHTS <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></span>
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">📈 Monthly Revenue (₹ Cr)</span>
+                    <span class="tech-tag highlight-tag">Line Chart &nbsp;·&nbsp; Excel</span>
+                </div>
+
+                <div class="chart-pane full-width">
+                    <div class="ch-wrap h-line">
+                        <canvas id="seasonalityChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="season-cards">
+                    <div class="season-card peak">
+                        <div class="sc-label">PEAK SEASON</div>
+                        <h4>Jan – Apr</h4>
+                        <p>Increase ad spend by 40%. Festival &amp; wedding-season demand is highest.</p>
+                    </div>
+                    <div class="season-card dip">
+                        <div class="sc-label">OFF SEASON</div>
+                        <h4>Sep – Nov</h4>
+                        <p>Run aggressive discount campaigns &amp; clearance sales to sustain volume.</p>
+                    </div>
+                    <div class="season-card neutral">
+                        <div class="sc-label">KEY STAT</div>
+                        <h4>16% Variance</h4>
+                        <p>Peak-to-trough difference is 16% — predictable enough to build a media calendar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard 7 -->
+            <div class="dashboard-block" id="fulfillment">
+                <div class="dashboard-header">
+                    <div class="dashboard-title-group">
+                        <h3 class="dashboard-title">Dashboard 7 — Operational Excellence</h3>
+                        <p class="dashboard-meta">
+                            <span class="meta-chip">Order Status</span>
+                            <span class="meta-chip">Return Rates</span>
+                        </p>
+                    </div>
+                    <span class="insights-badge">2 INSIGHTS <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></span>
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">📦 Fulfillment Funnel</span>
+                    <span class="tech-tag highlight-tag">Donut Chart &nbsp;·&nbsp; Power BI</span>
+                </div>
+
+                <div class="chart-and-insight">
+                    <div class="chart-pane narrow-chart">
+                        <h4 class="chart-label">Order Status Distribution</h4>
+                        <div class="ch-wrap h-donut">
+                            <canvas id="statusRingChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="insight-pane">
+                        <div class="fulfillment-metrics">
+                            <div class="fm-row success-row">
+                                <span class="fm-label">Delivered</span>
+                                <div class="fm-bar-track">
+                                    <div class="fm-bar" style="width:89.3%; background:#1a1a1a;"></div>
+                                </div>
+                                <span class="fm-val">89.3%</span>
+                            </div>
+                            <div class="fm-row warn-row">
+                                <span class="fm-label">Returns</span>
+                                <div class="fm-bar-track">
+                                    <div class="fm-bar" style="width:3.3%; background:#c0392b;"></div>
+                                </div>
+                                <span class="fm-val">3.3%</span>
+                            </div>
+                            <div class="fm-row muted-row">
+                                <span class="fm-label">Other</span>
+                                <div class="fm-bar-track">
+                                    <div class="fm-bar" style="width:7.4%; background:#bdc3c7;"></div>
+                                </div>
+                                <span class="fm-val">~7.4%</span>
+                            </div>
+                        </div>
+                        <div class="highlight-callout">
+                            <span class="hc-icon">💡</span>
+                            <p>Reducing returns from 3.3% → 2% through better product imagery and size guides will save an estimated <strong>₹40–50 Lakhs</strong> annually.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Slide 8: Strategic Recommendations -->
-        <section id="slide-8" class="slide beige">
-            <div class="slide-content">
-                <span class="slide-number reveal stagger-1">08</span>
-                <h2 class="reveal stagger-2">3-Pillar Strategy Roadmap</h2>
-                <div class="pillar-grid reveal stagger-3">
-                    <div class="pillar-card">
-                        <div class="p-num">01</div>
-                        <h3>Market Penetration</h3>
-                        <ul>
-                            <li>Aggressive push in North India.</li>
-                            <li>Target: +30% Customer Base.</li>
-                        </ul>
-                    </div>
-                    <div class="pillar-card secondary">
-                        <div class="p-num">02</div>
-                        <h3>Product Diversification</h3>
-                        <ul>
-                            <li>Launch dedicated Men's Wear.</li>
-                            <li>60% budget on Adult Women.</li>
-                        </ul>
-                    </div>
-                    <div class="pillar-card tertiary">
-                        <div class="p-num">03</div>
-                        <h3>Channel Strategy</h3>
-                        <ul>
-                            <li>Reduce Amazon dependency &lt;30%.</li>
-                            <li>Scale Meesho & launch D2C.</li>
-                        </ul>
-                    </div>
+        <!-- ═══════════════════════════════════════
+             SECTION: STRATEGIC ROADMAP
+        ═══════════════════════════════════════ -->
+        <section class="report-section" id="strategy">
+            <h2 class="section-title">3-PILLAR STRATEGY ROADMAP</h2>
+            <div class="section-divider"></div>
+            <p class="section-lead">Based on the data, three strategic pillars offer the clearest path to ₹25 Crore in FY25.</p>
+
+            <div class="pillar-row">
+                <div class="pillar">
+                    <div class="pillar-num">01</div>
+                    <h3>Market Penetration</h3>
+                    <ul>
+                        <li>Aggressive push in North India (Delhi, Punjab, Haryana).</li>
+                        <li>Target: +30% new customer base within 12 months.</li>
+                        <li>Increase state coverage from 10 → 18 states.</li>
+                    </ul>
+                </div>
+                <div class="pillar secondary">
+                    <div class="pillar-num">02</div>
+                    <h3>Product Diversification</h3>
+                    <ul>
+                        <li>Launch a dedicated Men's Wear collection.</li>
+                        <li>60% budget retained on Adult Women segment.</li>
+                        <li>Tap Teen Girls cohort with trend-driven drops.</li>
+                    </ul>
+                </div>
+                <div class="pillar tertiary">
+                    <div class="pillar-num">03</div>
+                    <h3>Channel Strategy</h3>
+                    <ul>
+                        <li>Reduce Amazon dependency from 35% → below 30%.</li>
+                        <li>Scale Meesho for social-commerce audience.</li>
+                        <li>Launch D2C website for margin improvement.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Slide 9: Final Financial Outlook -->
-        <section id="slide-9" class="slide dark">
-            <div class="slide-content">
-                <span class="slide-number reveal stagger-1">09</span>
-                <h2 class="reveal stagger-2">Financial Growth Projection</h2>
-                <div class="waterfall-container reveal stagger-3">
-                    <canvas id="waterfallChart"></canvas>
-                </div>
-                <div class="closing-statement reveal stagger-4">
-                    <h3>Target Revenue: ₹25 Cr+</h3>
-                    <p>"By unlocking the male segment and entering North Indian markets, we project a 20% revenue
-                        increase in FY25."</p>
-                </div>
-                <div class="brand-signature">Vrinda Store</div>
-                <div class="generated-by">Generated by: <strong>Ujjaval Bhardwaj</strong></div>
+        <!-- ═══════════════════════════════════════
+             SECTION: FINANCIAL PROJECTION
+        ═══════════════════════════════════════ -->
+        <section class="report-section" id="projection">
+            <h2 class="section-title">FINANCIAL GROWTH PROJECTION</h2>
+            <div class="section-divider"></div>
+            <p class="section-lead">By executing on all three pillars, the model projects a path from ₹21.18 Cr to ₹25 Cr+ in FY25.</p>
+            <div class="waterfall-wrap">
+            <div class="ch-wrap h-water">
+                <canvas id="waterfallChart"></canvas>
+            </div>
+            </div>
+            <div class="projection-statement">
+                <h3>Target Revenue: ₹25 Cr+</h3>
+                <p>"By unlocking the male segment, entering North Indian markets, and improving operational efficiency, we project a 20%+ revenue increase in FY25."</p>
             </div>
         </section>
+
     </main>
+
+    <!-- ═══════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════ -->
+    <footer class="report-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">Vrinda Store</div>
+            <p class="footer-meta">Data Report · FY 2024-25 · Prepared by <strong>Ujjaval Bhardwaj</strong> · Tools: Excel, Power BI, DAX</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
